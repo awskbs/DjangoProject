@@ -1,0 +1,168 @@
+<html>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding-right: 5px;
+}
+
+h4 {
+    font-family:verdana;
+	font-size: 15px;
+	background-color: #666;
+	color: white;
+}
+
+header {
+    background-color: #DC7633;
+    padding: 20px;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: 1px solid black;
+    color: white;
+    padding: 3px 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12%;
+}
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+</style>
+
+<title> Fusion HCM DevOps Portal </title>
+<header align="center"> <font color="lavender"  face="verdana"> Oracle Fusion HCM DevOps Portal </font> </header>
+
+<div class="split left">
+</br />
+</br />
+</br />
+</br />
+</br />
+<div style="margin: 10px; padding: 0px;" class="centered">
+
+<h4>  About HCMDevOps Team </h4>
+Roles and Responsibilities Roles and ResponsibilitiesRoles and ResponsibilitiesRoles and ResponsibilitiesRoles and ResponsibilitiesRoles and ResponsibilitiesRoles and ResponsibilitiesRoles and ResponsibilitiesRoles and Responsibilities
+
+<h4>  Team Structure </h4>
+		Team StructureTeam StructureTeam StructureTeam Structure
+Team StructureTeam StructureTeam StructureTeam Structure
+
+<h4>  Bugs Reported To HCM DevOps </h4>
+
+<br><b><font color="brown"  size="4" face="verdana"> Project: Performnace Improvment Project Related Bugs </font></b><br>
+
+<button onclick="myFunction()" class="button">Refresh</button>
+
+<script>
+function myFunction() {
+    location.reload();
+}
+</script>
+
+<table style="width:100%" cellpadding="2">
+ <tr>
+   <th bgcolor="33a5ff"> <font size="1" face="verdana">#</font> </th>
+   <th bgcolor="33a5ff"><font size="1" face="verdana"> BugNo </font> </th>
+   <th bgcolor="33a5ff"><font size="1" face="verdana"> Assignee </font></th>
+   <th bgcolor="33a5ff"><font size="1" face="verdana"> Env</font></th>
+   <th bgcolor="33a5ff"><font size="1" face="verdana"> Status</font></th>
+   <th bgcolor="33a5ff"><font size="1" face="verdana"> Subject</font></th>
+ </tr>
+{% for bug in bugs.all %}
+ <tr>
+   <td> <font size="2" face="times"> {{bug.SLNO}} </font> </td>
+   <td> <font size="2" face="times"> <a href="https://bug.oraclecorp.com/pls/bug/webbug_edit.edit_info_top?rptno={{bug.BUGNO}}"  target="_blank">{{bug.BUGNO}}</a> </font> </td>
+   <td> <font size="2" face="times"> {{bug.ASSIGNEE}} </font> </td>
+   <td><font size="2" face="times"> {{bug.ENV}}  </font> </td>
+   <td>	<font size="2" face="times"> {{bug.STATUS}} </font> </td>
+   <td>	<font size="2" face="times"> {{bug.SUBJECT}} </font> </td>
+ </tr>
+{% endfor %}
+</table>
+</div>
+
+<div style="margin: 10px; padding: 0px;" class="centered">
+<br><b><font color="brown"  size="4" face="verdana"> All HCMDevOps Bugs </font></b><br>
+
+<button onclick="myFunction()" class="button">Refresh</button>
+
+<script>
+function myFunction() {
+    location.reload();
+}
+</script>
+
+<table style="width:100%" cellpadding="2">
+ <tr>
+   <th bgcolor="33a5ff"> <font size="1" face="verdana">#</font> </th>
+   <th bgcolor="33a5ff"><font size="1" face="verdana"> BugNo </font> </th>
+   <th bgcolor="33a5ff"><font size="1" face="verdana"> Assignee </font></th>
+   <th bgcolor="33a5ff"><font size="1" face="verdana"> Env</font></th>
+   <th bgcolor="33a5ff"><font size="1" face="verdana"> Status</font></th>
+   <th bgcolor="33a5ff"><font size="1" face="verdana"> Subject</font></th>
+ </tr>
+{% for bug in bugs.all %}
+ <tr>
+   <td> <font size="2" face="times"> {{bug.SLNO}} </font> </td>
+   <td> <font size="2" face="times"> <a href="https://bug.oraclecorp.com/pls/bug/webbug_edit.edit_info_top?rptno={{bug.BUGNO}}"  target="_blank">{{bug.BUGNO}}</a> </font> </td>
+   <td> <font size="2" face="times"> {{bug.ASSIGNEE}} </font> </td>
+   <td><font size="2" face="times"> {{bug.ENV}}  </font> </td>
+   <td>	<font size="2" face="times"> {{bug.STATUS}} </font> </td>
+   <td>	<font size="2" face="times"> {{bug.SUBJECT}} </font> </td>
+ </tr>
+{% endfor %}
+</table>
+</div>
+
+</div>
+
+<div class="split right">
+</br />
+</br />
+</br />
+</br />
+<div style="margin: 10px; padding: 0px;" class="centered">
+<br><b><font color="brown" size="4" face="verdana"> Important Links </font></b><br>
+
+<!--<a href="http://slc12mlk.us.oracle.com:8000/admin/" target="_blank" class="button"><font size="0.5"  face="verdana">Add/Edit</font></a> -->
+<table style="width:100%" cellpadding="2">
+ <tr>
+   <th bgcolor="33a5ff"> <font size="1" face="verdana"> Name</font></th>
+   <th bgcolor="33a5ff"> <font size="1" face="verdana"> Description</font></th>
+ </tr>
+{% for link in links.all %}
+ <tr>
+   <td><b> <a href="{{link.LINK}}" target="_blank"><font size="1" face="verdana"> {{link.NAME}} </font></b> </td></a>
+   <td> <font size="1" face="verdana"> {{link.DESCR}} </font> </td>
+ </tr>
+{% endfor %}
+</table>
+</div>
+</div>
+</html>
+
