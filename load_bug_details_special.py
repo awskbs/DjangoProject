@@ -5,7 +5,7 @@ import time
 import sqlite3
 
 f = open("/scratch/apps/bugs_details.csv","w")
-conn = cx_Oracle.connect('bkakani/L510sundar@bugap')
+conn = cx_Oracle.connect('bkakani/xxxxx@bugap')
 subj = " "
 f.write("rptno,rptdate,programmer,status,product_id,category,subject\n")
 cur = conn.cursor()

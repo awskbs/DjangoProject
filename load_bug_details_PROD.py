@@ -7,7 +7,7 @@ def bugreportFunc():
 
 	try:	
 		
-		conn = cx_Oracle.connect('bkakani/L510sundar@bugap')
+		conn = cx_Oracle.connect('bkakani/xxxx@bugap')
 		
 		conn2 = sqlite3.connect('/scratch/apps/bugdbProd/db.sqlite3')
 		subj = " "
